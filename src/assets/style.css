@@ -1,0 +1,244 @@
+html,
+body {
+  height: 100%;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+main {
+  flex: 1 1 auto;
+  min-height: 1px;
+}
+
+strong {
+  font-family: PB;
+}
+
+/* color */
+.btn-white {
+  background-color: hsl(var(--b1));
+  border: none;
+  color: hsl(var(--bc));
+}
+
+.btn-white:hover {
+  background-color: #c5c5c5;
+}
+
+/* max width */
+.max-w-content {
+  max-width: 1440px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 1024px) {
+  .max-w-content {
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+}
+
+/* header */
+.scrolled {
+  background-color: hsl(var(--bc) / 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.scrolled .btn-wallet {
+  background-color: hsl(var(--b1) / 0.1);
+}
+
+.scrolled .btn-wallet:last-child:hover {
+  background-color: rgba(147, 144, 148, 0.4);
+}
+
+.ic-metamask:hover .wallet-address {
+  transform: translateY(-100%);
+}
+
+.ic-metamask:hover .sign-out {
+  transform: translateY(-100%);
+}
+
+.ic-metamask .wallet-address::before {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background: url(./ic-metamask.svg);
+  background-size: cover;
+  content: '';
+}
+
+@media (min-width: 768px) {
+  .ic-metamask .wallet-address::before {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+  }
+}
+
+.arrow {
+  display: inline-block;
+  margin-top: -3px;
+  padding: 4px;
+  border: solid hsl(var(--bc));
+  border-width: 0 3px 3px 0;
+  border-radius: 1px;
+  transform: rotate(45deg);
+  transition: transform 0.2s;
+}
+.arrow.arrow-up {
+  margin-top: 2px;
+  transform: rotate(-135deg);
+}
+
+/* highlight */
+.text-404 {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.text-404::before {
+  content: '';
+  position: absolute;
+  left: 3px;
+  bottom: 3px;
+  z-index: -1;
+  width: 100%;
+  height: 6px;
+  border-radius: 2px 0;
+  background-color: hsl(var(--p));
+  transform: skew(40deg, 0);
+}
+
+.text-404::before {
+  height: 8px;
+}
+
+@media (min-width: 768px) {
+  .text-404::before {
+    left: 5px;
+    bottom: 4px;
+    height: 14px;
+  }
+}
+
+/* transition */
+.show-down-enter-active,
+.show-down-leave-active {
+  transition: all 0.32s ease-in-out;
+  max-height: 500px;
+}
+
+.show-down-enter-from,
+.show-down-leave-to {
+  overflow: hidden;
+  opacity: 0;
+  max-height: 0 !important;
+}
+
+/* swiper */
+.swiper {
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition-property: transform;
+  transition-timing-function: linear;
+}
+
+.swiper-slide {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  transition-property: transform;
+}
+
+.swiper-pagination {
+  transition: all 0.3;
+  transform: translate3d(0, 0, 0);
+}
+
+.swiper-pagination-bullet {
+  display: block;
+  width: 30px;
+  height: 5px;
+  background-color: hsl(var(--bc) / 0.15);
+  border-radius: 2px;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .swiper-pagination-bullet {
+    width: 40px;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: hsl(var(--bc));
+}
+
+/* skeleton */
+.skeleton {
+  background-image: linear-gradient(
+    90deg,
+    rgba(237, 237, 237, 0.9) 18.87%,
+    rgba(245, 245, 245, 0.2) 48.65%,
+    rgba(237, 237, 237, 0.9) 100%
+  );
+  background-size: 200% 100%;
+  animation: gradient 2s infinite linear;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 200% 0;
+  }
+  60%,
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* top banner bg */
+.top-banner {
+  background: linear-gradient(180deg, #5935d5 0%, #211f52 100%);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.slide-bg {
+  background: url('@/assets/ic-b.webp'), linear-gradient(90deg, #5b33e0 0%, #1e232a 100%);
+  background-size:
+    700px auto,
+    auto 100%;
+  background-position:
+    calc(50% + 150px) -200px,
+    50%;
+  background-repeat: no-repeat;
+}
+
+.bg-detail::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 700px;
+  background: linear-gradient(180deg, #8063dd 0%, #c3c2c9 55%, #fff 100%);
+}

@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: storage/build/Dockerfile
+    container_name: 'boralabs-tba'
+    ports:
+      - "8080:8080"
+  server:
+    build:
+      context: .
+      dockerfile: storage/build/server/Dockerfile
+    container_name: 'metadata-server'
+    ports:
+      - "3000:3000"

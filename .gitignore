@@ -1,0 +1,48 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# testing
+coverage
+
+# build
+.next/
+out/
+dist
+*.local
+
+# Outer Resource
+chain
+
+#infrastructure
+.k8s*
+skaffold.yaml
+
+# misc
+.DS_Store
+.vscode
+.idea
+*.pem
+
+# debug
+*.log*
+
+# local env files
+.env*
+!.env.sample
+
+# turbo
+.turbo
+
+# visualizations
+graph.*
+
+# editors
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
