@@ -10,8 +10,8 @@
     font-display: swap;
     src:
       local('Pretendard Regular'),
-      url('https://www.boralabs.net/assets/fonts/Pretendard-Regular.woff2') format('woff2'),
-      url('https://www.boralabs.net/assets/fonts/Pretendard-Regular.woff') format('woff');
+      url('https://www.boralabs.com/assets/fonts/Pretendard-Regular.woff2') format('woff2'),
+      url('https://www.boralabs.com/assets/fonts/Pretendard-Regular.woff') format('woff');
   }
 
   @font-face {
@@ -20,8 +20,8 @@
     font-display: swap;
     src:
       local('Pretendard Medium'),
-      url('https://www.boralabs.net/assets/fonts/Pretendard-Medium.woff2') format('woff2'),
-      url('https://www.boralabs.net/assets/fonts/Pretendard-Medium.woff') format('woff');
+      url('https://www.boralabs.com/assets/fonts/Pretendard-Medium.woff2') format('woff2'),
+      url('https://www.boralabs.com/assets/fonts/Pretendard-Medium.woff') format('woff');
   }
 
   @font-face {
@@ -30,8 +30,8 @@
     font-display: swap;
     src:
       local('Pretendard Bold'),
-      url('https://www.boralabs.net/assets/fonts/Pretendard-Bold.woff2') format('woff2'),
-      url('https://www.boralabs.net/assets/fonts/Pretendard-Bold.woff') format('woff');
+      url('https://www.boralabs.com/assets/fonts/Pretendard-Bold.woff2') format('woff2'),
+      url('https://www.boralabs.com/assets/fonts/Pretendard-Bold.woff') format('woff');
   }
 }
 
